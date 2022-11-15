@@ -1,0 +1,10 @@
+version: '3'
+services:
+  rabbitmq:
+    image: rabbitmq
+    ports:
+      - 5672:5672
+      - 15672:15672
+    volumes:
+      - "./enabled_plugins:/etc/rabbitmq/enabled_plugins"
+      - "./rabbitmq.conf:/etc/rabbitmq/rabbitmq.conf"
